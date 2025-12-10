@@ -1,3 +1,7 @@
 <Solution>
+  <Folder Name="/方案項目/">
+    <File Path="Readme.md" />
+  </Folder>
+  <Project Path="AgentFramework/AgentFramework.csproj" Id="39603d5d-6c27-4e2e-ac1c-b491cde3e936" />
   <Project Path="McpServer/McpServer.csproj" Id="8368cf1a-e7fb-4da0-ae1c-30c1d2b5ecba" />
 </Solution>

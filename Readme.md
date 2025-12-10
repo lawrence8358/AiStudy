@@ -3,7 +3,8 @@
 
 ---
 ## 專案說明
- + McpServer：[使用 MCP Server 打造企業內部人才搜尋工具 (使用 .NET 10)](https://lawrencetech.blogspot.com/2025/12/mcp-server-net-10.html)
++ AgentFramework：使用 Agent Framework 套件呼叫 Gemini 範例
++ McpServer：[使用 MCP Server 打造企業內部人才搜尋工具 (使用 .NET 10)](https://lawrencetech.blogspot.com/2025/12/mcp-server-net-10.html)
 
 
 ---
