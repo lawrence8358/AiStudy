@@ -9,8 +9,47 @@
 
 
 ---
+## 📝 OpenSpec 設定
+
+本專案使用 [OpenSpec](https://github.com/cloving-ai/openspec) 進行規格驅動開發，讓 AI 協助理解專案脈絡並追蹤變更。
+
+### 📁 目錄結構
+
+```
+openspec/
+├── project.md          # 專案脈絡：技術棧、慣例、約束條件
+├── AGENTS.md           # AI 助手指令：OpenSpec 工作流程說明
+├── specs/              # 規格文件：目前已實作的功能規格
+│   └── [capability]/   # 依功能模組分類
+│       └── spec.md     # 需求與情境定義
+└── changes/            # 變更提案：待實作或進行中的變更
+    ├── [change-name]/  # 個別變更目錄
+    │   ├── proposal.md # 變更原因與影響
+    │   ├── tasks.md    # 實作檢查清單
+    │   └── specs/      # 差異規格
+    └── archive/        # 已完成的變更歸檔
+```
+
+### 🔄 工作流程
+
+1. **建立變更** → 在 `changes/` 建立提案
+2. **實作變更** → 依 `tasks.md` 完成開發
+3. **歸檔變更** → 移至 `archive/` 並更新 `specs/`
+
+
+---
 ## ⚙️ 專案設定檔說明
-下面分別列出 `.github` 與 `.vscode` 目錄下的設定檔與用途，讓協作者能更快速理解每個檔案的目的。
+下面分別列出 `.agent` 、 `.github` 、 `.vscode` 目錄下的設定檔與用途，讓協作者能更快速理解每個檔案的目的。
+
+### 🤖 .agent
+
+#### 📋 workflows/
+
+定義 AI 助手可使用的工作流程（Slash Commands），搭配 OpenSpec 使用：
+
+- **[openspec-proposal](.agent/workflows/openspec-proposal.md)**：建立新的 OpenSpec 變更提案，產生 `proposal.md`、`tasks.md` 及規格差異檔。
+- **[openspec-apply](.agent/workflows/openspec-apply.md)**：實作已核准的 OpenSpec 變更，依 `tasks.md` 逐項完成開發。
+- **[openspec-archive](.agent/workflows/openspec-archive.md)**：歸檔已部署的 OpenSpec 變更，更新規格並移至 `archive/`。
 
 ### 📁 .github
 
@@ -29,6 +68,7 @@
 
 - **[settings.json](.vscode/settings.json)**：VS Code 工作區設定檔，包含本地開發與擴充套件行為設定，例如 Copilot Chat 產生 commit 訊息時的提示範本參考路徑。
 - **[mcp.json](.vscode/mcp.json)**：MCP Server 啟動設定檔，定義本地開發時的伺服器啟動命令（例如：`McpServerDemo` 專案）。
+
 
 ---
 ## 🚀 啟用 GitHub Copilot Agent Skills
