@@ -1,0 +1,22 @@
+# 安裝指令 pip3 install -r .\requirements.txt
+# 輸出目前固定版本 pip3 freeze > requirements2.txt
+
+# ----- PDF Skill 需要 -----
+# 基礎 PDF 操作 (Merge, Split, Form Filling)
+pypdf==6.6.0
+
+# 文字與表格擷取 (Extract text, Extract tables)
+pdfplumber==0.11.9
+
+# 建立 PDF (Create PDFs)
+reportlab==4.4.9
+
+# OCR 文字辨識 (OCR scanned PDFs)
+# 注意：這只是 Python 介面，電腦還需安裝 Tesseract 軟體
+pytesseract==0.3.13
+
+# 圖片處理與 PDF 轉圖片 (OCR 前置作業)
+# 你的表格提到 "Convert to image first"，通常需要這兩個
+pillow==12.1.0
+pdf2image==1.17.0
+# ----- PDF Skill 需要 -----
