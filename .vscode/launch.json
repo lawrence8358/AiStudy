@@ -2,6 +2,17 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "CopilotSdkClient",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build CopilotSdkClient",
+            "program": "${workspaceFolder}/CopilotSdkClient/bin/Debug/net10.0/CopilotSdkClient.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/CopilotSdkClient",
+            "stopAtEntry": false,
+            "console": "integratedTerminal"
+        },
+        {
             "name": "McpServerHttp",
             "type": "coreclr",
             "request": "launch",

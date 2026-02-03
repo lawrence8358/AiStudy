@@ -3,6 +3,7 @@
     <File Path="Readme.md" />
   </Folder>
   <Project Path="AgentFramework/AgentFramework.csproj" Id="39603d5d-6c27-4e2e-ac1c-b491cde3e936" />
+  <Project Path="CopilotSdkClient/CopilotSdkClient.csproj" Id="c3d4e5f6-a7b8-9012-cdef-345678901234" />
   <Project Path="McpServer/McpServer.csproj" Id="8368cf1a-e7fb-4da0-ae1c-30c1d2b5ecba" />
   <Project Path="McpServerHttp/McpServerHttp.csproj" Id="a1b2c3d4-e5f6-7890-abcd-ef1234567890" />
   <Project Path="McpServerHttp.Tests/McpServerHttp.Tests.csproj" Id="b2c3d4e5-f6a7-8901-bcde-f23456789012" />

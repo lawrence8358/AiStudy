@@ -5,9 +5,15 @@
 ---
 ## 📚 專案說明
 + **AgentFramework**：使用 Agent Framework 套件呼叫 Gemini 範例
+
++ **CopilotSdkClient**：GitHub Copilot SDK 用戶端專案，展示如何透過 SDK 連接外部 Copilot CLI Server（支援本地連接與 ngrok HTTPS 端點）
+![McpServerHttp Demo](images/CopilotSdkClient.png)
+
 + **McpServer**：[使用 MCP Server 打造企業內部人才搜尋工具 (使用 .NET 10)](https://lawrencetech.blogspot.com/2025/12/mcp-server-net-10.html) - 使用 Stdio 傳輸
+
 + **McpServerHttp**：使用 HTTP/SSE 傳輸的 MCP Server，模擬待辦事項管理功能，遵循 Clean Code & SOLID 原則
 ![McpServerHttp Demo](images/McpHttpServerDemo.png)
+
 + **McpServerHttp.Tests**：McpServerHttp 的單元測試專案（xUnit）
 
 
@@ -185,6 +191,7 @@ MCP (Model Context Protocol) Server 讓 AI 助手能夠存取專案特定的工�
 + [Introduction to GenAI and ML 2025 Fall - 李宏毅](https://speech.ee.ntu.edu.tw/~hylee/GenAI-ML/2025-fall.php)
 + [Claude Code Skills：讓 AI 變身專業工匠](https://kaochenlong.com/claude-code-skills)
 + [VS Code 中 GitHub Copilot 設定參考](https://vscode.com.tw/docs/copilot/reference/copilot-settings#_general-settings)
++ [建立您的第一個由 Copilot 驅動的應用](https://github.com/github/copilot-sdk/blob/main/docs/getting-started.md#connecting-to-an-external-cli-server)
 
 + 各大好用的 Skill 範例
   + [Anthropic 官方技能](https://github.com/anthropics/skills)
