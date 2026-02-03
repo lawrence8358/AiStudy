@@ -211,6 +211,44 @@ npx @modelcontextprotocol/inspector dotnet run
 
 ---
 
+## 🔗 與 Claude Code 整合
+
+### 設定步驟
+
+Claude Code 使用 `.mcp.json` 檔案來配置 MCP Server。
+
+### 快速設定
+
+1. 在專案根目錄建立 `.mcp.json`：
+
+```json
+{
+  "mcpServers": {
+    "McpServerDemo": {
+      "type": "stdio",
+      "command": "dotnet",
+      "args": ["run", "--project", "McpServer/McpServer.csproj"]
+    }
+  }
+}
+```
+
+2. 在 `.claude/settings.local.json` 中啟用 MCP Server：
+
+```json
+{
+  "enabledMcpjsonServers": ["McpServerDemo"]
+}
+```
+
+### 驗證設定
+
+1. 重新啟動 Claude Code 會話
+2. Claude Code 會自動載入並連接 MCP Server
+3. 嘗試詢問員工相關問題，例如：「請查詢所有員工清單」
+
+---
+
 ## 📝 授權
 
 本專案採用 MIT License

@@ -1,0 +1,45 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "McpServerHttp",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-mcpserverhttp",
+            "program": "${workspaceFolder}/McpServerHttp/bin/Debug/net10.0/McpServerHttp.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/McpServerHttp",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "http://localhost:5050"
+            }
+        },
+        {
+            "name": "McpServer (Stdio)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-mcpserver",
+            "program": "${workspaceFolder}/McpServer/bin/Debug/net10.0/McpServer.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/McpServer",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        },
+        {
+            "name": "AgentFramework",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build-agentframework",
+            "program": "${workspaceFolder}/AgentFramework/bin/Debug/net10.0/AgentFramework.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/AgentFramework",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        }
+    ]
+}

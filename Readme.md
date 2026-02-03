@@ -4,8 +4,11 @@
 
 ---
 ## 📚 專案說明
-+ AgentFramework：使用 Agent Framework 套件呼叫 Gemini 範例
-+ McpServer：[使用 MCP Server 打造企業內部人才搜尋工具 (使用 .NET 10)](https://lawrencetech.blogspot.com/2025/12/mcp-server-net-10.html)
++ **AgentFramework**：使用 Agent Framework 套件呼叫 Gemini 範例
++ **McpServer**：[使用 MCP Server 打造企業內部人才搜尋工具 (使用 .NET 10)](https://lawrencetech.blogspot.com/2025/12/mcp-server-net-10.html) - 使用 Stdio 傳輸
++ **McpServerHttp**：使用 HTTP/SSE 傳輸的 MCP Server，模擬待辦事項管理功能，遵循 Clean Code & SOLID 原則
+![McpServerHttp Demo](images/McpHttpServerDemo.png)
++ **McpServerHttp.Tests**：McpServerHttp 的單元測試專案（xUnit）
 
 
 ---
@@ -39,7 +42,7 @@ openspec/
 
 ---
 ## ⚙️ 專案設定檔說明
-下面分別列出 `.agent` 、 `.github` 、 `.vscode` 目錄下的設定檔與用途，讓協作者能更快速理解每個檔案的目的。
+下面分別列出 `.agent` 、 `.claude` 、 `.github` 、 `.vscode` 目錄下的設定檔與用途，讓協作者能更快速理解每個檔案的目的。
 
 ### 🤖 .agent
 
@@ -50,6 +53,29 @@ openspec/
 - **[openspec-proposal](.agent/workflows/openspec-proposal.md)**：建立新的 OpenSpec 變更提案，產生 `proposal.md`、`tasks.md` 及規格差異檔。
 - **[openspec-apply](.agent/workflows/openspec-apply.md)**：實作已核准的 OpenSpec 變更，依 `tasks.md` 逐項完成開發。
 - **[openspec-archive](.agent/workflows/openspec-archive.md)**：歸檔已部署的 OpenSpec 變更，更新規格並移至 `archive/`。
+
+### 🧠 .claude
+
+Claude Code 專用的設定目錄，用於配置 Claude Code 的行為與權限。
+
+- **[settings.local.json](.claude/settings.local.json)**：本地設定檔，包含工具權限（如允許執行 `dotnet build`、`dotnet test`）與啟用的 MCP Server 清單。
+
+### 📄 .mcp.json
+
+Claude Code 的 MCP Server 配置檔，定義可用的 MCP Server 連線資訊。
+
+```json
+{
+  "mcpServers": {
+    "McpServerHttpDemo": {
+      "type": "sse",
+      "url": "http://localhost:5050/sse"
+    }
+  }
+}
+```
+
+> 💡 **注意**：`type: "sse"` 的 MCP Server 需要先手動啟動伺服器，`type: "stdio"` 則由 Claude Code 自動啟動。
 
 ### 📁 .github
 
