@@ -1,0 +1,7 @@
+{
+    "github.copilot.chat.commitMessageGeneration.instructions": [
+        {
+            "text": "請遵循 Conventional Commits 格式，提交訊息須以 `<type>: ` 開頭並搭配「繁體中文」簡潔描述；可用類型包含：feat (功能)、fix (修補)、docs (文件)、refactor (重構)、perf (效能)、chore (雜務) 與 style (格式)。"
+        }
+    ] 
+}
